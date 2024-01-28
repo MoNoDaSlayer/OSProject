@@ -454,14 +454,14 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
  <img src="./images/websitelink.png" width="70%">
 
- <img src="./images/DadLock.png" width="70%">
-
 
 5. You can also see the Port in the **PORTS** tab, next to the terminal tab.
 
 6. You can then access your website by adding an index.html towards the end of your url link, like the one below. 
 
  <img src="./images/helloworldweb.png" width="70%">
+
+ <img src="./images/DadLock.png" width="70%">
 
 ***Questions:***
 
