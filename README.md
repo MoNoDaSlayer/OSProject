@@ -461,6 +461,8 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
  <img src="./images/helloworldweb.png" width="70%">
 
+ <img src="./images/DadLock.png" width="70%">
+
 ***Questions:***
 
 1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** 
