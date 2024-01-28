@@ -25,7 +25,7 @@ Team Mates:
 ***Questions:***
 
 1. What is the link of the fork OSProject in your repository. ***(1 mark)*** : **https://github.com/MoNoDaSlayer/OSProject**.
-2. How many files and folders are in this repository. ***(1 mark)*** **2 files**.
+2. How many files and folders are in this repository. ***(1 mark)*** **2 folders , 1 file**.
 
 
 ## Exploring github codespaces
