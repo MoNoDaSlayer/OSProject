@@ -319,13 +319,19 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6130.5 avail Mem
 @ainlizam ➜ /workspaces/OSProject (main) $ uname -a
 Linux codespaces-b72c6b 6.2.0-1018-azure #18~22.04.1-Ubuntu SMP Tue Nov 21 19:25:02 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
 ```
-11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+11. What is the available free memory in the system. ***(1 mark)***:
+**The available free memory is approximately 245 MB.**
+12. What is the available disk space mounted on /workspace. ***(1 mark)*** 
+**The available disk space mounted on /workspaces is approximately 17.5 GB (17516788).**
+13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** **The Linux version is 5.4.0-1044-azure, and the hardware architecture is not explicitly mentioned here.**
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** 
+**ls shows a simple list of files, and ls -asl provides a detailed listing with additional information, including file permissions, ownership, size, and timestamps.**
+15. What is the TLB size of the Virtual CPU. ***(1 mark)*** 
+**The TLB size of the virtual CPU is 2560 4K pages.**
+16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** 
+**The CPU speed of the virtual CPU is approximately 2445.425 MHz.**
+17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** 
+**The top running process consuming the most CPU cycles is a Node.js process with PID 2093.**
 
 ## Running your own container instance.
 
@@ -402,8 +408,9 @@ ls: cannot access 'helloworld.txt': No such file or directory
 ```
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
-2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
+1. Are files in the container persistent. Why not?. ***(1 mark)*** **The files and changes made within the container are not persisted when the container is stopped or removed.It is because, containers are designed to be stateless units that can be started, stopped, and replaced without worrying about preserving state**.
+
+2. Can we run two, or three instances of debian linux? . ***(1 mark)*** **Yes, we can run multiple instances of Debian Linux or any other operating system using virtualization or containerization technologies**.
 
 ## Running your own container with persistent storage
 
