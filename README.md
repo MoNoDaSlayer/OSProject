@@ -454,6 +454,8 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
  <img src="./images/websitelink.png" width="70%">
 
+ <img src="./images/DadLock.png" width="70%">
+
 
 5. You can also see the Port in the **PORTS** tab, next to the terminal tab.
 
