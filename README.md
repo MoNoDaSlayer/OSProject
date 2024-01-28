@@ -430,14 +430,21 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Fill answer here__.
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** 
+```bash
+@ainlizam ➜ /workspaces/OSProject/myroot/myroot (main) $ ls -l /workspaces/OSProject/myroot
+total 4
+drwxrwxrwx+ 2 codespace codespace 4096 Jan 28 15:59 myroot
+```
+**Permissions: drwxrwxrwx+ , Directory: myroot , Owner: codespace , Group: codespace**
+
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace myroot
 
 ```
-*** __Fill answer here__.***
+**After running the chown command, the ownership of the files in the myroot directory will be changed to the codespace user and group.**
 
 ## You are on your own, create your own static webpage
 
@@ -463,9 +470,9 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
 ***Questions:***
 
-1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __Fill answer here__.
-2. What port is the apache web server running. ***(1 mark)***
-3. What port is open for http protocol on the host machine? ***(1 mark)***
+1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** : **Permissions: -rwxr-xr-x , User: root , Group: root**
+2. What port is the apache web server running. ***(1 mark)***: **8181**
+3. What port is open for http protocol on the host machine? ***(1 mark)*** : **80**
 
 ## What to submit
 
