@@ -336,14 +336,15 @@ docker run --detach -it debian
 ```
 2. This will run the debian container. To check if the debian container is running, type
 ```bash
-@joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
-CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
-f65be1987f84   debian    "bash"    4 minutes ago   Up 4 minutes             romantic_jackson
+@ainlizam ➜ /workspaces/OSProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED              STATUS              PORTS     NAMES
+a7b35c20729b   debian    "bash"    About a minute ago   Up About a minute           xenodochial_golick
+5e34a685d9ca   debian    "bash"    2 minutes ago        Up 2 minutes                  unruffled_cray
 ```
 
 3. Keep note of the name used by your container, this is usually given random names unless you specify your own name. Now run a bash command on the container. Make sure you use the name of your container instead of the one shown here. 
 ```bash
-docker exec -i -t romantic_jackson /bin/bash
+docker exec -i -t unruffled_cray /bin/bash
 ```
 
 4. Create a file on the container. First you must make sure you are in the bash command prompt of the container. The container is new, and does not have any software other than the debian OS. To create a new file, you will need an editor installed. In the bash shell of the container, run the package manager apt-get to install nano text editor. 
@@ -362,27 +363,43 @@ root@f65be1987f84:~# nano helloworld.txt
 
 6. Stop the container and run **docker ps -a**, and restart the container again. Is your file in the container still available?
 ```bash 
-@joeynor ➜ /workspaces/OSProject (main) $ docker stop romantic_jackson
+@ainlizam ➜ /workspaces/OSProject (main) $ docker stop unruffled_cray
 
-@joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
+@ainlizam ➜ /workspaces/OSProject (main) $ docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                        PORTS     NAMES
-f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago             romantic_jackson
+a7b35c20729b   debian    "bash"    16 minutes ago   Up 16 minutes                           xenodochial_golick
+5e34a685d9ca   debian    "bash"    16 minutes ago   Exited (137) 57 seconds ago             unruffled_cray
 
-@joeynor ➜ /workspaces/OSProject (main) $ docker restart romantic_jackson
+@ainlizam ➜ /workspaces/OSProject (main) $ docker restart unruffled_cray
 ```
-
+**After restart, our file in the container still available and the changes made are preserved**
+```bash
+@ainlizam ➜ /workspaces/OSProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS          PORTS     NAMES
+a7b35c20729b   debian    "bash"    18 minutes ago   Up 18 minutes             xenodochial_golick
+5e34a685d9ca   debian    "bash"    18 minutes ago   Up 55 seconds             unruffled_cray
+```
 7. Stop the container and delete the container. What happened to your helloworld.txt?
 
 ```bash 
-@joeynor ➜ /workspaces/OSProject (main) $ docker stop romantic_jackson
+@ainlizam ➜ /workspaces/OSProject (main) $ docker stop unruffled_cray
 
-@joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
-CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                        PORTS     NAMES
-f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago             romantic_jackson
+@ainlizam ➜ /workspaces/OSProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                            PORTS     NAMES
+a7b35c20729b   debian    "bash"    24 minutes ago   Up 24 minutes                               xenodochial_golick
+5e34a685d9ca   debian    "bash"    25 minutes ago   Exited (137) About a minute ago             unruffled_cray
 
-@joeynor ➜ /workspaces/OSProject (main) $ docker rm romantic_jackson
+@ainlizam ➜ /workspaces/OSProject (main) $ docker rm unruffled_cray
 ```
+**After stop and delete the container, the associated file system changes, including your helloworld.txt file, are typically lost. The container's file system is removed along with the container itself.**
+```bash 
+@ainlizam ➜ /workspaces/OSProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS          PORTS     NAMES
+a7b35c20729b   debian    "bash"    26 minutes ago   Up 26 minutes             xenodochial_golick
 
+@ainlizam ➜ /workspaces/OSProject (main) $ ls helloworld.txt
+ls: cannot access 'helloworld.txt': No such file or directory
+```
 ***Questions:***
 
 1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
