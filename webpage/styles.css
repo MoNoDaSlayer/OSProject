@@ -5,6 +5,17 @@ body {
     padding: 0;
 }
 
+header {
+    background-color: #c1269a;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+header h1 {
+    margin: 0; /* Remove default margin */
+}
+
 .portfolio {
     display: flex;
     justify-content: space-around;
@@ -34,3 +45,4 @@ h2 {
 p {
     color: #666;
 }
+
