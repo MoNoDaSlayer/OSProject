@@ -25,7 +25,7 @@ Team Mates:
 ***Questions:***
 
 1. What is the link of the fork OSProject in your repository. ***(1 mark)*** : **https://github.com/MoNoDaSlayer/OSProject**.
-2. How many files and folders are in this repository. ***(1 mark)*** __Fill answer here__.
+2. How many files and folders are in this repository. ***(1 mark)*** **2 files**.
 
 
 ## Exploring github codespaces
@@ -57,9 +57,9 @@ Team Mates:
 
 ***Questions:***
 
-1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** __Fill answer here__.
-2. What are the two options of ram, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** __Fill answer here__.
-3. Why must we commit and sync our current work on source control? ***(1 mark)*** __Fill answer here__.
+1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** **Windows**.
+2. What are the two options of ram, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** **Starter Configuration: RAM: 2 GB Disk: 7 GB vCPU: 1 | Performance Configuration: RAM: 4 GB Disk: 14 GB vCPU: 2**.
+3. Why must we commit and sync our current work on source control? ***(1 mark)*** **Committing and syncing make sure that all developers working on a project are using the most recent version of the code. As a result, disputes are avoided and the team's codebase is kept current and uniform.**.
 
 ## Exploring the Terminal
 
